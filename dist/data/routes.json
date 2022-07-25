@@ -1,0 +1,47 @@
+[
+  {
+    "route": "/",
+    "class": "magazine",
+    "action": "get"
+  },
+  {
+    "route": "/author/list",
+    "class": "author",
+    "action": "get"
+  },
+  {
+    "route": "/author/add",
+    "class": "author",
+    "action": "insert"
+  },
+  {
+    "route": "/author/update",
+    "class": "author",
+    "action": "update"
+  },
+  {
+    "route": "/author/delete",
+    "class": "author",
+    "action": "delete"
+  },
+  {
+    "route": "/magazine/list",
+    "class": "magazine",
+    "action": "get"
+  },
+  {
+    "route": "/magazine/add",
+    "class": "magazine",
+    "action": "insert"
+  },
+  {
+    "route": "/magazine/update",
+    "class": "magazine",
+    "action": "update"
+  },
+  {
+    "route": "/magazine/delete",
+    "class": "magazine",
+    "action": "delete"
+  }
+]

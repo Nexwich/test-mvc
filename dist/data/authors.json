@@ -1,0 +1,20 @@
+[
+  {
+    "name": "1",
+    "lastName": "1",
+    "patronymic": "1",
+    "_id": 1
+  },
+  {
+    "name": "2",
+    "lastName": "2",
+    "patronymic": "2",
+    "_id": 2
+  },
+  {
+    "name": "3",
+    "lastName": "3",
+    "patronymic": "3",
+    "_id": 3
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "_id": 1,
+    "title": "1",
+    "caption": "1",
+    "image": "/files/1.jpg",
+    "authors": [1, 2],
+    "publishDate": "2022-07-01"
+  },
+  {
+    "_id": 2,
+    "title": "2",
+    "caption": "1",
+    "image": "/files/1.jpg",
+    "authors": [1, 2],
+    "publishDate": "2022-07-01"
+  },
+  {
+    "_id": 3,
+    "title": "3",
+    "caption": "1",
+    "image": "/files/1.jpg",
+    "authors": [1, 2],
+    "publishDate": "2022-07-01"
+  },
+  {
+    "_id": 4,
+    "title": "4",
+    "caption": "1",
+    "image": "/files/1.jpg",
+    "authors": [1, 2],
+    "publishDate": "2022-07-01"
+  },
+  {
+    "_id": 5,
+    "title": "5",
+    "caption": "1",
+    "image": "/files/1.jpg",
+    "authors": [1, 2],
+    "publishDate": "2022-07-01"
+  }
+]
