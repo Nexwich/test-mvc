@@ -1,21 +1,21 @@
 <?php
 
-namespace field;
+namespace system\classes;
 
 abstract class field {
-  protected $name;
+  protected string $name;
   protected $value;
-  protected $settings;
+  protected array $settings;
 
   /**
-   * @param mixed $field Данные по полю
+   * @param array $field Данные по полю
    */
-  public function __construct ($field) {
+  public function __construct (array $field) {
     $this->settings = $field;
     $this->name = $field['name'];
   }
 
-  public function get_name () {
+  public function get_name (): string {
     return $this->name;
   }
 
@@ -25,7 +25,8 @@ abstract class field {
 
   /**
    * Обработать данные
-   * @param mixed $value Входное значение
+   * @param $value Входное значение
+   * @return string
    */
   public function prepare ($value) {
     $this->value = $value;

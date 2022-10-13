@@ -1,24 +1,26 @@
 <?php
 
-namespace controller;
+namespace system\classes;
 
+/**
+ * Контроллер
+ */
 abstract class controller {
-  protected $model_name = '\model\model';
-  protected $view_name = '\view\view';
-
-  protected $model;
-  protected $view;
+  protected $model_class;
+  protected $view_class;
+  protected model $model;
+  protected view $view;
 
   public function __construct () {
-    $this->model = new $this->model_name();
-    $this->view = new $this->view_name();
+    $this->model = new $this->model_class();
+    $this->view = new $this->view_class();
   }
 
   /**
-   * Выбрать действие
+   * Вызвать действие
    * @param string $action_name Название действия
    */
-  public function execute ($action_name) {
+  public function call (string $action_name) {
     $action_name = 'action_' . $action_name;
     $this->$action_name();
   }
@@ -27,7 +29,7 @@ abstract class controller {
    * Получить объекты
    * @return array
    */
-  protected function get_items () {
+  protected function get_items (): array {
     $src_data = $this->model->get_items();
     $data = $src_data;
 

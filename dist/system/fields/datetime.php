@@ -1,8 +1,13 @@
 <?php
 
-namespace field;
+namespace system\fields;
 
-class cm_datetime extends field {
+use system\classes\field;
+
+/**
+ * Дата и время
+ */
+class datetime extends field {
   public function prepare ($value) {
     $this->value = date('Y-m-d H:i:s', strtotime($value));
     return $this->value;

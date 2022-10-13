@@ -84,4 +84,4 @@ echo '<br>Удален журнал - ' . $out;
 curl_close($curl);
 
 ?>
-  </pre>
+</pre>

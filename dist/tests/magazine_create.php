@@ -27,7 +27,8 @@ $authors = json_decode($authors, true);
     <label>
       <select name="authors[]" multiple="multiple">
         <?php foreach ($authors as $author) { ?>
-          <option value="<?= $author['_id'] ?>"><?= $author['name'] . ' ' . $author['lastName'] ?></option>
+          <option value="<?= $author['_id'] ?>"><?= $author['name'] . ' '
+            . $author['lastName'] ?></option>
         <?php } ?>
       </select>
     </label>
