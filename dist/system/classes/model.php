@@ -237,11 +237,70 @@ abstract class model {
   }
 
   /**
-   * Получить значение поля
-   * @param string $name Название поля
-   * @return mixed
+   * Задать значение
+   * @param string $name ключ в массиве $this->data
+   * @param mixed $value новое значение
+   * @return self
    */
-  public function get (string $name) {
-    return (!empty($this->data[$name]) ? $this->data[$name] : null);
+  public function set($name, $value) {
+    $this->data[$name] = $value;
+
+    return $this;
+  }
+
+  /**
+   * Получить значение
+   * @param string $name ключ в массиве $this->data
+   * @return mixed значение
+   */
+  public function get($name) {
+    return $this->data[$name] ?? NULL;
+  }
+
+  /**
+   * Проверка наличия свойства
+   * @param string $name
+   * @return boolean
+   */
+  public function has_property($name) {
+    return array_key_exists($name, $this->data);
+  }
+
+  // ArrayAccess
+  public function offsetGet($offset) {
+    return $this->get($offset);
+  }
+
+  public function offsetSet($offset, $value) {
+    $this->set($offset, $value);
+  }
+
+  public function offsetExists($offset) {
+    return $this->has_property($offset);
+  }
+
+  public function offsetUnset($offset) {
+    unset($this->data[$offset]);
+  }
+
+  // Iterator
+  public function rewind() {
+    reset($this->data);
+  }
+
+  public function current() {
+    return $this->offsetGet(key($this->data));
+  }
+
+  public function key() {
+    return key($this->data);
+  }
+
+  public function next() {
+    return next($this->data);
+  }
+
+  public function valid() {
+    return (key($this->data) !== null);
   }
 }
